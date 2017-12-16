@@ -1,4 +1,9 @@
 declare module "ccxt" {
+    
+    export interface ccxt {
+        [id: string]: Exchange;   
+    }
+    
     export const exchanges: string[];
     export const version: string;
 
