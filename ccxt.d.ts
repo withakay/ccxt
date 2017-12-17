@@ -1,9 +1,10 @@
 declare module "ccxt" {
-    
-    export interface ccxt {
-        [id: string]: Exchange;   
+
+    interface Indexable {
+        [id: any]: any;
     }
-    
+    export default Indexable;
+        
     export const exchanges: string[];
     export const version: string;
 
@@ -81,6 +82,7 @@ declare module "ccxt" {
         public hasFetchTickers: boolean;
 
         public proxy: string;
+
         public apiKey: string;
         public secret: string;
         public password: string;
