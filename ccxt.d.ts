@@ -1,10 +1,10 @@
 declare module "ccxt" {
 
-    interface Indexable {
-        [id: any]: any;
+    interface CCXT {
+        [id: string]: Exchange;
     }
-    export default Indexable;
-        
+    export default CCXT;
+
     export const exchanges: string[];
     export const version: string;
 
@@ -73,6 +73,9 @@ declare module "ccxt" {
         readonly countries: string[];
         readonly urls: any;
         readonly api: any;
+
+        readonly symbols: string[];
+        readonly markets: string[];
 
         readonly rateLimit: number;
         readonly hasFetchOHLCV: boolean;
